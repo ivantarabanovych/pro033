@@ -1,12 +1,7 @@
-function createCard(title, description) {
-  return `
-    <div class="card">
-    <h2>[title]</h2>
-    <p>[description]</p>
-    </div>
-    `;
+function generateURL(protocol, domain, path){
+    return `${protocol}://${domain}/${path}`;
 }
 
-const cardHTML = createCard("Title", "Description");
-console.log(cardHTML);
+const url = generateURL("https", "google.com", "/example");
+console.log(url);
 
