@@ -1,4 +1,10 @@
-function introduce(name, age, city) {
-    return `Привіт, мене звати ${name}. Мені ${age} років і я живу в ${city}`
+function shoppingList(items) {
+    let list = "Список покупок:\n"
+    for (const item of items){
+        list += `-${item}\n`;
+    }
+    return list.trim();
 }
-console.log(introduce("Ivan", 21, "Hlyniany"));
+
+const items = ["Молоко", "Хліб", "Масло", "Ковбаса"]
+console.log(shoppingList(items));
