@@ -1,11 +1,12 @@
-function highlight(strings, ...values) {
-    return strings.reduce((result, string, index) => {
-      const value = values[index] ? `<strong>${values[index]}</strong>` : '';
-      return result + string + value;
-    }, '');
-  }
+function createCard(title, description) {
+  return `
+    <div class="card">
+    <h2>[title]</h2>
+    <p>[description]</p>
+    </div>
+    `;
+}
 
-const name = "Bob";
-const place = "Hogwarts";
-const message = highlight`Привіт ${name}! Ласкаво просимо в ${place}`;
-console.log(message);
+const cardHTML = createCard("Title", "Description");
+console.log(cardHTML);
+
